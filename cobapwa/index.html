@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">  <!-- Warna tema untuk PWA -->
+    <title>Tugas PRG</title>
+    <link rel="manifest" href="manifest.json">  <!-- Link ke manifest.json -->
+</head>
+<body>
+    <h1>Coba Web PWA</h1>
+    <script>
+        // Daftarkan Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('Service Worker berhasil didaftarkan'))
+                .catch(err => console.error('Gagal mendaftarkan Service Worker:', err));
+        }
+    </script>
+</body>
+</html>
